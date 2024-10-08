@@ -1,0 +1,283 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\controllers\\avaliacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\avaliacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Migrations\\20241008013600_RecreateIntermediateTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241008013600_RecreateIntermediateTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Migrations\\20241008003001_AddColumnValorPedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241008003001_AddColumnValorPedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\models\\avaliacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\avaliacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\models\\imagens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\imagens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\models\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\controllers\\imagenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\imagenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\desktop\\loja de roupa\\backend\\thestylehub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20241008013600_RecreateIntermediateTables.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Migrations\\20241008013600_RecreateIntermediateTables.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241008013600_RecreateIntermediateTables.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Migrations\\20241008013600_RecreateIntermediateTables.cs",
+              "RelativeToolTip": "Migrations\\20241008013600_RecreateIntermediateTables.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T01:36:01.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20241008003001_AddColumnValorPedidos.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Migrations\\20241008003001_AddColumnValorPedidos.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241008003001_AddColumnValorPedidos.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Migrations\\20241008003001_AddColumnValorPedidos.cs",
+              "RelativeToolTip": "Migrations\\20241008003001_AddColumnValorPedidos.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T00:30:01.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AvaliacoesController.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\AvaliacoesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AvaliacoesController.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\AvaliacoesController.cs",
+              "RelativeToolTip": "Controllers\\AvaliacoesController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAuwCoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T23:46:07.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ImagensController.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\ImagensController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ImagensController.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\ImagensController.cs",
+              "RelativeToolTip": "Controllers\\ImagensController.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAYwDsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T23:10:30.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PedidosController.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\PedidosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PedidosController.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\PedidosController.cs",
+              "RelativeToolTip": "Controllers\\PedidosController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwCsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T23:02:48.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProdutosController.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\ProdutosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutosController.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\ProdutosController.cs",
+              "RelativeToolTip": "Controllers\\ProdutosController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwCgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T22:20:26.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Controllers\\UsuariosController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T22:16:38.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-07T21:32:11.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Usuarios.cs",
+              "RelativeDocumentMoniker": "Models\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Usuarios.cs",
+              "RelativeToolTip": "Models\\Usuarios.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T01:55:52.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Produtos.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Produtos.cs",
+              "RelativeDocumentMoniker": "Models\\Produtos.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Produtos.cs",
+              "RelativeToolTip": "Models\\Produtos.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAcwCoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T01:59:58.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Pedidos.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Pedidos.cs",
+              "RelativeDocumentMoniker": "Models\\Pedidos.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Pedidos.cs",
+              "RelativeToolTip": "Models\\Pedidos.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAwwB4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T00:59:47.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Imagens.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Imagens.cs",
+              "RelativeDocumentMoniker": "Models\\Imagens.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Imagens.cs",
+              "RelativeToolTip": "Models\\Imagens.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T01:36:57.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Avaliacoes.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Avaliacoes.cs",
+              "RelativeDocumentMoniker": "Models\\Avaliacoes.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\Avaliacoes.cs",
+              "RelativeToolTip": "Models\\Avaliacoes.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA9wB0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T02:42:23.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T19:11:13.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T18:35:51.919Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
