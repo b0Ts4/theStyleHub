@@ -101,13 +101,64 @@ namespace theStyleHub.Controllers
         // POST: api/Produtos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Produtos>> PostProdutos(Produtos produtos)
+        [Consumes("application/json")]
+        public async Task<ActionResult<Produtos>> PostProdutos([FromBody] ProdutoDTO produtoDTO)
         {
-            _context.Produtos.Add(produtos);
+            
+
+            var produto = new Produtos
+            {
+                Nome = produtoDTO.Nome,
+                Descricao = produtoDTO.Descricao,
+                Categoria = produtoDTO.Categoria,
+                Cor = produtoDTO.Cor,
+                Genero = produtoDTO.Genero,
+                Valor = produtoDTO.Valor,
+                Promocao = produtoDTO.Promocao
+            };
+
+            
+            _context.Produtos.Add(produto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProdutos", new { id = produtos.Id }, produtos);
+            
+            if (produtoDTO.ImagensBase64 != null && produtoDTO.ImagensBase64.Count > 0)
+            {
+                
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);  
+                }
+
+                foreach (var base64Image in produtoDTO.ImagensBase64)
+                {
+                    
+                    var imageBytes = Convert.FromBase64String(base64Image);
+                    var caminhoImagem = Path.Combine(uploadsFolder, Guid.NewGuid().ToString() + ".jpg");
+
+                    
+                    await System.IO.File.WriteAllBytesAsync(caminhoImagem, imageBytes);
+                    Console.WriteLine(caminhoImagem);
+                    
+                    var imagemProduto = new Imagens
+                    {
+                        Caminho = caminhoImagem,  
+                        TipoImagem = "Produto",
+                        Id_produto = produto.Id  
+                    };
+
+                    
+                    _context.Imagens.Add(imagemProduto);
+                }
+            }
+
+           
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetProdutos", new { id = produto.Id }, produto);
         }
+
 
         // DELETE: api/Produtos/5
         [HttpDelete("{id}")]

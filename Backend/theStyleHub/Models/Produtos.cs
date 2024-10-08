@@ -9,7 +9,7 @@ public class Produtos
     public int Id { get; set; }
 
     [Required]
-    [StringLength(100)]
+    [Column(TypeName = "varchar(50)")]
     public string Nome { get; set; } = "";
 
     [Required]
@@ -40,4 +40,5 @@ public class Produtos
 
     public List<Avaliacoes> Avaliacoes { get; set; }
     public List<Imagens> Imagens { get; set; }
+
 }

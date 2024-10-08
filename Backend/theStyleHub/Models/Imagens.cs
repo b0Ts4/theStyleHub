@@ -10,7 +10,7 @@ public class Imagens
     public int Id { get; set; }
 
     [Required]
-    [Column(TypeName = "varchar(100)")]
+    [Column(TypeName = "varchar(300)")]
     public string Caminho { get; set; } = "";
 
     [Required]

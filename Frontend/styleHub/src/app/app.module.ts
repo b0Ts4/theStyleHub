@@ -1,18 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
-import { ApiService } from './services/api.service';
+import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
+import { ProductService } from './services/product.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CadastroProdutosComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule
   ],
-  providers: [ApiService],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
