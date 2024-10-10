@@ -24,11 +24,19 @@ namespace theStyleHub.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Produtos>> GetProdutos(int id)
         {
-            var produtos = await _context.Produtos.FindAsync(id);
+            var produtos = await _context.Produtos
+                .Include(p => p.Imagens)  // Inclui as imagens relacionadas ao produto
+                .FirstOrDefaultAsync(p => p.Id == id);
 
             if (produtos == null)
             {
                 return NotFound();
+            }
+
+            // Modifica o caminho da imagem para incluir o caminho completo do servidor
+            foreach (var imagem in produtos.Imagens)
+            {
+                imagem.Caminho = $"{Request.Scheme}://{Request.Host}/uploads/{imagem.Caminho}";
             }
 
             return produtos;
@@ -36,11 +44,13 @@ namespace theStyleHub.Controllers
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Produtos>>> GetProdutosPeloFiltro(
-        [FromQuery] string? genero,
-        [FromQuery] string? categoria,
-        [FromQuery] string? cor)
+    [FromQuery] string? genero,
+    [FromQuery] string? categoria,
+    [FromQuery] string? cor)
         {
-            var query = _context.Produtos.AsQueryable();
+            var query = _context.Produtos
+                .Include(p => p.Imagens)  // Inclui as imagens relacionadas
+                .AsQueryable();
 
             if (!string.IsNullOrEmpty(genero))
             {
@@ -62,6 +72,15 @@ namespace theStyleHub.Controllers
             if (produtos == null || produtos.Count == 0)
             {
                 return NotFound();
+            }
+
+            // Modifica o caminho da imagem para incluir o caminho completo do servidor
+            foreach (var produto in produtos)
+            {
+                foreach (var imagem in produto.Imagens)
+                {
+                    imagem.Caminho = $"{Request.Scheme}://{Request.Host}/uploads/{imagem.Caminho}";
+                }
             }
 
             return produtos;
@@ -104,8 +123,6 @@ namespace theStyleHub.Controllers
         [Consumes("application/json")]
         public async Task<ActionResult<Produtos>> PostProdutos([FromBody] ProdutoDTO produtoDTO)
         {
-            
-
             var produto = new Produtos
             {
                 Nome = produtoDTO.Nome,
@@ -117,43 +134,40 @@ namespace theStyleHub.Controllers
                 Promocao = produtoDTO.Promocao
             };
 
-            
             _context.Produtos.Add(produto);
             await _context.SaveChangesAsync();
 
-            
             if (produtoDTO.ImagensBase64 != null && produtoDTO.ImagensBase64.Count > 0)
             {
-                
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
                 if (!Directory.Exists(uploadsFolder))
                 {
-                    Directory.CreateDirectory(uploadsFolder);  
+                    Directory.CreateDirectory(uploadsFolder);
                 }
 
                 foreach (var base64Image in produtoDTO.ImagensBase64)
                 {
-                    
                     var imageBytes = Convert.FromBase64String(base64Image);
-                    var caminhoImagem = Path.Combine(uploadsFolder, Guid.NewGuid().ToString() + ".jpg");
+                    var uniqueFileName = Guid.NewGuid().ToString() + ".jpg";
+                    var fileName = uniqueFileName;
+                    var caminhoFisicoImagem = Path.Combine(uploadsFolder, uniqueFileName);
 
                     
-                    await System.IO.File.WriteAllBytesAsync(caminhoImagem, imageBytes);
-                    Console.WriteLine(caminhoImagem);
-                    
+                    await System.IO.File.WriteAllBytesAsync(caminhoFisicoImagem, imageBytes);
+
+
+                    // Salva o caminho relativo no banco de dados
                     var imagemProduto = new Imagens
                     {
-                        Caminho = caminhoImagem,  
+                        Caminho = fileName, 
                         TipoImagem = "Produto",
-                        Id_produto = produto.Id  
+                        Id_produto = produto.Id
                     };
 
-                    
                     _context.Imagens.Add(imagemProduto);
                 }
             }
 
-           
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetProdutos", new { id = produto.Id }, produto);

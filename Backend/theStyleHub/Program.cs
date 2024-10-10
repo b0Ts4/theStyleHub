@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using theStyleHub.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +27,13 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "uploads")),
+    RequestPath = "/uploads"
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

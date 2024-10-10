@@ -1,0 +1,138 @@
+/*/////////////////////NAVBAR/////////////////////////*/
+* {
+    margin: -10px; /* Mantido conforme sua preferência */
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FCBF49;
+    height: 13vh;
+    width: 100%; 
+    padding: 0 40px;
+}
+
+.categorias {
+    display: flex;
+    gap: 20vh; /* Mantido o gap que você escolheu */
+    align-items: center;
+}
+
+.categorias a{
+    text-decoration: none;
+    color: white;
+}
+
+.categorias p {
+    font-size: large;
+    margin: 0;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.searchbar button {
+    border-radius: 0 10px 10px 0;
+    height: 5vh;
+    width: 4vw;
+}
+
+.searchbar input {
+    border-radius: 10px 0 0 10px;
+    height: 5vh;
+    width: 18vw;
+    padding-left: 20px; /* Adicionando padding para o texto não ficar encostado */
+    outline: none; /* Remove o contorno azul ao focar */
+}
+
+.perfil a {
+    font-size: 1.8rem;
+    color: white;
+    margin-right: 2vw;
+}
+
+.logo {
+    height: 18.5vh;
+    margin-top: 6px;
+}
+/*/////////////////////NAVBAR/////////////////////////*/
+
+
+.home-banner {
+    display: block; /* Garante que o elemento seja tratado como um bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 90%;
+    margin-top: 5vh;
+}
+
+.impact {
+    font-size: 3rem; /* Tamanho grande para o texto */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #333; /* Cor do texto */
+    margin: 20px auto; /* Espaçamento em torno do texto */
+    padding: 20px 0; /* Espaçamento vertical para um bom alinhamento */
+    width: 100%;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.products-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os produtos quebrem em linhas quando necessário */
+    justify-content: space-between; /* Espaça os produtos de maneira uniforme */
+    gap: 2rem; /* Espaço entre os produtos */
+    margin: 3vh auto; /* Margem superior e inferior */
+    width: 90%; /* Controla a largura do container */
+}
+
+.products-row a {
+    text-align: center;  /* Centraliza o texto e os preços */
+    display: flex;       /* Flexbox para facilitar o layout vertical */
+    flex-direction: column; /* Alinha itens (imagem, nome, preço) em uma coluna */
+    justify-content: flex-start; /* Mantém os itens no topo, com espaçamento entre eles */
+    align-items: center;  /* Garante que tudo fique centralizado */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 10px;
+    box-sizing: border-box;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.foto-produto {
+    width: 80%;  
+    height: auto;        /* Garante que a imagem ocupe 100% da largura do contêiner */
+    object-fit: cover;    /* Ajusta a imagem para cobrir completamente o contêiner, sem distorção */
+    border-radius: 10px;  /* Mantém as bordas arredondadas */
+}
+
+.products-row a:hover .foto-produto {
+    transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
+}
+
+.nome-produto {
+    font-size: 1.1rem;
+    margin-top: 20px;    /* Espaçamento entre a imagem e o nome */
+    margin-bottom: 5px;  /* Espaçamento entre o nome e o preço */
+    font-weight: 600;
+    color: #333;
+}
+
+.preco-produto {
+    font-size: 1rem; 
+    color: #555; 
+    margin-bottom: 25px;
+    margin-top: 1px;
+}
+
+

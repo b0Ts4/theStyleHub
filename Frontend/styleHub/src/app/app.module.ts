@@ -8,18 +8,27 @@ import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos
 import { ProductService } from './services/product.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroProdutosComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

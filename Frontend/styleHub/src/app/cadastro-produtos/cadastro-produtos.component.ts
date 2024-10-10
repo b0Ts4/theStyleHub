@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ProductService } from '../services/product.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-create',
@@ -8,7 +9,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./cadastro-produtos.component.css']
 })
 export class CadastroProdutosComponent {
-  constructor(private ProductService: ProductService) {}
+  constructor(private ProductService: ProductService, private toastr: ToastrService) {}
   selectedImages: any[] = [];  // Array para armazenar as imagens em base64
 
   // Captura múltiplas imagens selecionadas e as converte para base64
@@ -57,6 +58,7 @@ export class CadastroProdutosComponent {
   
     this.ProductService.addProduct(productData).subscribe(response => {
       console.log('Produto cadastrado com sucesso!', response);
+      this.toastr.success('Realizado com sucesso', 'Cadastro de Produto');
     }, error => {
       console.error('Erro ao cadastrar produto', error);
     });

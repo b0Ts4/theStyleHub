@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment.development';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = environment.apiUrl + "Produtos";  
+  private apiUrl = environment.apiUrl;  
 
   constructor(private http: HttpClient) {}
 
@@ -16,6 +16,11 @@ export class ProductService {
       'Content-Type': 'application/json'
     });
 
-    return this.http.post<any>(this.apiUrl, productData);
+    return this.http.post<any>(this.apiUrl + "Produtos", productData);
   }
+
+  getProdutos(): Observable<any> {
+    return this.http.get<any>(this.apiUrl + "Produtos");
+  } 
+
 }
