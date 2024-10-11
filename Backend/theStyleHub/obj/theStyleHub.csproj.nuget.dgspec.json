@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\theStyleHub.csproj": {}
+    "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\theStyleHub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\theStyleHub.csproj": {
+    "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\theStyleHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\theStyleHub.csproj",
+        "projectUniqueName": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\theStyleHub.csproj",
         "projectName": "theStyleHub",
-        "projectPath": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\theStyleHub.csproj",
+        "projectPath": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\theStyleHub.csproj",
         "packagesPath": "C:\\Users\\Wagner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\obj\\",
+        "outputPath": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wagner\\AppData\\Roaming\\NuGet\\NuGet.Config",

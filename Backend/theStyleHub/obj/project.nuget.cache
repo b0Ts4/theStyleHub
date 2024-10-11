@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ImE9R/yoFh0iJ1gu7nLLFERd/V5z2pFC250ZIRVS7kwqcf/VhYzYbn290Ta+jZNbIDMt4w0mn56JNiTxbjj0QA==",
+  "dgSpecHash": "qTZtWJpKLLtd3u9YFec9BLAcGyty7yw7TqpJV/OGNrw6GsClt2hcsdUT4rUlUAKTYQNS6wsoHJH7nIQ9DCmdxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Wagner\\Desktop\\Loja de roupa\\Backend\\theStyleHub\\theStyleHub.csproj",
+  "projectFilePath": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\theStyleHub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Wagner\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Wagner\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

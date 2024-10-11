@@ -44,12 +44,13 @@ namespace theStyleHub.Controllers
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Produtos>>> GetProdutosPeloFiltro(
-    [FromQuery] string? genero,
-    [FromQuery] string? categoria,
-    [FromQuery] string? cor)
+        [FromQuery] string? genero,
+        [FromQuery] string? categoria,
+        [FromQuery] string? cor,
+        [FromQuery] string? nome)
         {
             var query = _context.Produtos
-                .Include(p => p.Imagens)  // Inclui as imagens relacionadas
+                .Include(p => p.Imagens)
                 .AsQueryable();
 
             if (!string.IsNullOrEmpty(genero))
@@ -65,6 +66,10 @@ namespace theStyleHub.Controllers
             if (!string.IsNullOrEmpty(cor))
             {
                 query = query.Where(p => p.Cor == cor);
+            }
+            if (!string.IsNullOrEmpty(nome))
+            {
+                query = query.Where(p => p.Nome.ToUpper().Contains(nome.ToUpper()));
             }
 
             var produtos = await query.ToListAsync();

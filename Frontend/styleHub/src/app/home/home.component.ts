@@ -1,5 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
+import { environment } from '../../environments/environment.development';
 declare var $: any;
 
 @Component({
@@ -8,9 +10,15 @@ declare var $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private ProductService: ProductService){}
+  constructor(private ProductService: ProductService, private router: Router){}
   
   dados: any = [];
+  searchQuery: string = '';
+
+
+  onSearch() {
+    this.router.navigate(["search"], {queryParams: { nome: this.searchQuery} })
+  }
   
   ngOnInit(): void{
     this.ProductService.getProdutos().subscribe(
@@ -27,12 +35,12 @@ export class HomeComponent {
   
   initSlickCarousel() {
     if (this.dados.length > 0) {
-      setTimeout(() => { // Garantir que o DOM foi atualizado
+      setTimeout(() => { 
         $('.products-row').slick({
           infinite: true,
-          slidesToShow: 4,  /* Número de produtos visíveis ao mesmo tempo */
-          slidesToScroll: 1, /* Número de produtos movidos por vez */
-          arrows: false,      /* Mostra setas de navegação */
+          slidesToShow: 4,  
+          slidesToScroll: 1, 
+          arrows: false,      
           dots: true,
           responsive: [
             {

@@ -19,8 +19,14 @@ export class ProductService {
     return this.http.post<any>(this.apiUrl + "Produtos", productData);
   }
 
-  getProdutos(): Observable<any> {
-    return this.http.get<any>(this.apiUrl + "Produtos");
+  getProdutos(nome?: string): Observable<any> {
+    let url = this.apiUrl + "Produtos";
+
+    if (nome) {
+      url += `?nome=${nome}`;
+    }
+    
+    return this.http.get<any>(url);
   } 
 
 }

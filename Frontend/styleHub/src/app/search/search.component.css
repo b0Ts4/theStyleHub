@@ -152,31 +152,74 @@
 .perfil .dropdown-content a:hover i {
     color: #fff; /* Mantém a cor dos ícones no hover */
 }
-
 /*/////////////////////NAVBAR/////////////////////////*/
 
-
-.home-banner {
-    display: block; /* Garante que o elemento seja tratado como um bloco */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    width: 90%;
-    margin-top: 5vh;
-}
-
-.impact {
-    font-size: 3rem; /* Tamanho grande para o texto */
-    text-align: center; /* Centraliza o texto horizontalmente */
-    color: #333; /* Cor do texto */
-    margin: 20px auto; /* Espaçamento em torno do texto */
-    padding: 20px 0; /* Espaçamento vertical para um bom alinhamento */
+.filter-square {
+    margin-left: 2vw; 
+    margin-top: 13vh;
     width: 100%;
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    font-family: "Bangers", system-ui;
-    font-weight: 400;
-    font-style: normal;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 15px;
 }
 
-.products-row {
+/* Estilo dos botões do accordion */
+.accordion {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+.accordion:hover {
+    background-color: #f0f0f0;
+}
+
+/* Painel dos filtros */
+.painel {
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    padding-left: 14px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.painel label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Seta para baixo e animação ao abrir o accordion */
+.accordion:after {
+    content: '\25BC'; 
+    font-size: 16px;
+    float: right;
+    transition: transform 0.3s;
+}
+
+.active:after {
+    content: "\25B2"; /* Seta para cima quando ativo */
+    transform: rotate(180deg); /* Anima a seta para cima */
+}
+
+/* Melhorias de espaçamento entre os filtros */
+.filtro {
+    margin-bottom: 20px; /* Espaçamento entre os filtros */
+}
+
+.products {
     display: flex;
     flex-wrap: wrap; /* Permite que os produtos quebrem em linhas quando necessário */
     justify-content: space-between; /* Espaça os produtos de maneira uniforme */
@@ -185,7 +228,7 @@
     width: 90%; /* Controla a largura do container */
 }
 
-.products-row a {
+.products a {
     text-align: center;  /* Centraliza o texto e os preços */
     display: flex;       /* Flexbox para facilitar o layout vertical */
     flex-direction: column; /* Alinha itens (imagem, nome, preço) em uma coluna */
@@ -200,12 +243,12 @@
 
 .foto-produto {
     width: 80%;  
-    height: auto;        /* Garante que a imagem ocupe 100% da largura do contêiner */
+    height: 30vh;        /* Garante que a imagem ocupe 100% da largura do contêiner */
     object-fit: cover;    /* Ajusta a imagem para cobrir completamente o contêiner, sem distorção */
     border-radius: 10px;  /* Mantém as bordas arredondadas */
 }
 
-.products-row a:hover .foto-produto {
+.products a:hover .foto-produto {
     transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
 }
 
@@ -224,5 +267,11 @@
     margin-top: 1px;
 }
 
+.container {
+    display: flex;
+}
 
-
+.all-products{
+    margin-left: 1vw;
+    margin-top: 13vh
+}
