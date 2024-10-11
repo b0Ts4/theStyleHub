@@ -1,2 +1,2 @@
 # theStyleHub
-Uma loja de roupas utilizando Angular(Framework) e C#
+Projeto pessoal de uma loja de roupas utilizando Angular(Framework), C# e PostgreSQL.
