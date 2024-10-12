@@ -79,28 +79,38 @@
     <div class="container">
         <div class="filter-square">
             <div class="filtro">
-                <button class="accordion">Gênero</button>
-                <div class="painel">
-                    <label><input type="checkbox"> Masculino</label>
-                    <label><input type="checkbox"> Feminino</label>
-                    <label><input type="checkbox"> Infantil</label>
+                <button class="accordion" (click)="toggleAccordion('genero')">Gênero</button>
+                <div class="panel" [ngClass]="{ 'active': activePanel === 'genero' }" [ngStyle]="{ maxHeight: activePanel === 'genero' ? panelHeight : '0px' }">
+                    <label><input type="checkbox" (change)="onGeneroChange('masculino', $event)"> Masculino</label>
+                    <label><input type="checkbox" (change)="onGeneroChange('feminino', $event)"> Feminino</label>
+                    <label><input type="checkbox" (change)="onGeneroChange('infantil', $event)"> Infantil</label>
                 </div>
             </div>
             <div class="filtro">
-                <button class="accordion">Categoria</button>
-                <div class="painel">
-                    <label><input type="checkbox"> Camisetas</label>
+                <button class="accordion" (click)="toggleAccordion('categoria')">Categoria</button>
+                <div class="panel" [ngClass]="{ 'active': activePanel === 'categoria' }" [ngStyle]="{ maxHeight: activePanel === 'categoria' ? panelHeight : '0px' }">
+                    <label>
+                        <input type="checkbox" (change)="onCategoriaChange('camisetas', $event)"> Camisetas
+                    </label>
                 </div>
             </div>
             <div class="filtro">
-                <button class="accordion">Cor</button>
-                <div class="painel">
-                    <label><input type="checkbox"> Vermelho</label>
-                    <label><input type="checkbox"> Azul</label>
-                    <label><input type="checkbox"> Preto</label>
+                <button class="accordion" (click)="toggleAccordion('cor')">Cor</button>
+                <div class="panel" [ngClass]="{ 'active': activePanel === 'cor' }" [ngStyle]="{ maxHeight: activePanel === 'cor' ? panelHeight : '0px' }">
+                    <label>
+                        <input type="checkbox" (change)="onColorChange('vermelho', $event)"> Vermelho
+                    </label>
+                    <label><input type="checkbox" (change)="onColorChange('azul', $event)"> Azul</label>
+                    <label><input type="checkbox" (change)="onColorChange('preto', $event)"> Preto</label>
                 </div>
             </div>
+
+            <button class="botao-filtro" (click) = "onFilter()">
+                Filtrar <i class="fa-solid fa-filter"></i>
+            </button>
+
         </div>
+
         <div class="all-products">
             <div class="products" >
                 <p *ngIf="dados.length <= 0"> Ops! Não conseguimos encontrar nenhum produto...</p>

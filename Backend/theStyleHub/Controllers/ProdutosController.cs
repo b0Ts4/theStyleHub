@@ -44,34 +44,38 @@ namespace theStyleHub.Controllers
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Produtos>>> GetProdutosPeloFiltro(
-        [FromQuery] string? genero,
-        [FromQuery] string? categoria,
-        [FromQuery] string? cor,
+        [FromQuery] List<string>? genero,
+        [FromQuery] List<string>? categoria,
+        [FromQuery] List<string>? cor,
         [FromQuery] string? nome)
         {
             var query = _context.Produtos
                 .Include(p => p.Imagens)
                 .AsQueryable();
 
-            if (!string.IsNullOrEmpty(genero))
+            // Aplicação dos filtros
+            if (genero != null && genero.Any())
             {
-                query = query.Where(p => p.Genero == genero);
+                // Comparação insensível a maiúsculas
+                query = query.Where(p => genero.Select(g => g.ToLower()).Contains(p.Genero.ToLower()));
             }
 
-            if (!string.IsNullOrEmpty(categoria))
+            if (categoria != null && categoria.Any())
             {
-                query = query.Where(p => p.Categoria == categoria);
+                query = query.Where(p => categoria.Select(c => c.ToLower()).Contains(p.Categoria.ToLower()));
             }
 
-            if (!string.IsNullOrEmpty(cor))
+            if (cor != null && cor.Any())
             {
-                query = query.Where(p => p.Cor == cor);
+                query = query.Where(p => cor.Select(c => c.ToLower()).Contains(p.Cor.ToLower()));
             }
+
             if (!string.IsNullOrEmpty(nome))
             {
-                query = query.Where(p => p.Nome.ToUpper().Contains(nome.ToUpper()));
+                query = query.Where(p => p.Nome.ToLower().Contains(nome.ToLower()));
             }
 
+            // Executa a query final
             var produtos = await query.ToListAsync();
 
             if (produtos == null || produtos.Count == 0)
@@ -79,7 +83,7 @@ namespace theStyleHub.Controllers
                 return NotFound();
             }
 
-            // Modifica o caminho da imagem para incluir o caminho completo do servidor
+            // Ajustar os caminhos das imagens
             foreach (var produto in produtos)
             {
                 foreach (var imagem in produto.Imagens)

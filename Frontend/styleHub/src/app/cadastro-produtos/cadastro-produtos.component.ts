@@ -10,23 +10,22 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class CadastroProdutosComponent {
   constructor(private ProductService: ProductService, private toastr: ToastrService) {}
-  selectedImages: any[] = [];  // Array para armazenar as imagens em base64
+  selectedImages: any[] = [];
 
-  // Captura múltiplas imagens selecionadas e as converte para base64
   onImagesSelected(event: Event) {
     const files = (event.target as HTMLInputElement).files;
     if (files) {
       Array.from(files).forEach(file => {
         const reader = new FileReader();
         reader.onload = () => {
-          // Armazenamos a imagem em base64 no array
+          
           this.selectedImages.push({
             fileName: file.name,
             fileType: file.type,
-            base64Value: reader.result?.toString().split(',')[1]  // Pega a parte base64
+            base64Value: reader.result?.toString().split(',')[1]
           });
         };
-        reader.readAsDataURL(file);  // Converte a imagem para base64
+        reader.readAsDataURL(file);
       });
     }
   }
@@ -45,7 +44,7 @@ export class CadastroProdutosComponent {
       cor: form.value.cor,
       genero: form.value.genero,
       valor: form.value.valor,
-      promocao: form.value.promocao ? form.value.promocao : 0,
+      promocao: form.value.promocao? form.value.promocao : 0,
       imagensBase64: this.selectedImages.map(image => image.base64Value),  // Mapeia as imagens base64
       usuariosCarrinho: [],
       usuariosWishlist: [],

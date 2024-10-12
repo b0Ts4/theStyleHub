@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SearchComponent } from './search/search.component';
     CadastroProdutosComponent,
     HomeComponent,
     SearchComponent,
+    ProdutoComponent,
   ],
   imports: [
     BrowserModule,

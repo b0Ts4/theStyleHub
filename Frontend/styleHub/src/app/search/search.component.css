@@ -1,6 +1,6 @@
 /*/////////////////////NAVBAR/////////////////////////*/
 * {
-    margin: -10px; /* Mantido conforme sua preferência */
+    margin: -10px; 
     padding: 0;
     border: 0;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
 
 .categorias {
     display: flex;
-    gap: 20vh; /* Mantido o gap que você escolheu */
+    gap: 20vh; 
     align-items: center;
 }
 
@@ -51,18 +51,18 @@
     display: block;
     font-size: 1rem;
     display: flex;
-    align-items: center; /* Centraliza ícones e textos verticalmente */
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    align-items: center; 
+    gap: 10px; 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-content a i {
-    font-size: 1.2rem; /* Define um tamanho consistente para os ícones */
+    font-size: 1.2rem; 
 }
 
 .dropdown-content a:hover {
     background-color: #f0a500;
-    transform: scale(1.05); /* Efeito de leve aumento ao passar o mouse */
+    transform: scale(1.05); 
 }
 
 .dropdown:hover .dropdown-content {
@@ -96,8 +96,8 @@
     border-radius: 10px 0 0 10px;
     height: 5vh;
     width: 18vw;
-    padding-left: 30px; /* Adicionando padding para o texto não ficar encostado */
-    outline: none; /* Remove o contorno azul ao focar */
+    padding-left: 30px; 
+    outline: none; 
 }
 
 .searchbar i{
@@ -115,7 +115,6 @@
     margin-top: 6px;
 }
 
-/* Ajuste para o dropdown do perfil */
 .perfil .dropdown-content {
     right: 0;
     left: auto;
@@ -124,7 +123,7 @@
 
 .perfil .dropdown-content a p {
     margin: 0;
-    font-size: 1rem; /* Ajuste o tamanho da fonte para ficar consistente */
+    font-size: 1rem; 
     color: white;
 }
 
@@ -132,25 +131,12 @@
     color: white;
 }
 
-/* Estilo adicional para o dropdown */
-.carrinho, .wishlist {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1rem;
-    color: white;
-}
-
-.carrinho i, .wishlist i {
-    font-size: 1.4rem; /* Tamanho dos ícones */
-}
-
 .carrinho:hover, .wishlist:hover {
-    transform: scale(1.05); /* Efeito hover */
+    transform: scale(1.05); 
 }
 
 .perfil .dropdown-content a:hover i {
-    color: #fff; /* Mantém a cor dos ícones no hover */
+    color: #fff; 
 }
 /*/////////////////////NAVBAR/////////////////////////*/
 
@@ -159,13 +145,13 @@
     margin-top: 13vh;
     width: 100%;
     max-width: 300px;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 5px;
-    background-color: #f9f9f9;
-    padding: 15px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
-/* Estilo dos botões do accordion */
 .accordion {
     background-color: #fff;
     color: #333;
@@ -178,63 +164,99 @@
     outline: none;
     font-size: 16px;
     transition: background-color 0.3s, padding 0.3s;
+    font-weight: bold;  
 }
 
 .accordion:hover {
     background-color: #f0f0f0;
 }
 
-/* Painel dos filtros */
-.painel {
-    display: none;
-    background-color: white;
+.panel {
+    max-height: 0;
     overflow: hidden;
-    padding-left: 14px;
-    padding-bottom: 10px;
-    padding-top: 5px;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+    margin-top: 15px;
+    padding-left: 35px;
+    width: 100%;
 }
 
-.painel label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
+
+.panel label {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 12px;
+    padding: 10px 0;
+    font-size: 15px;
     color: #555;
+    border-bottom: 1px solid #ddd;  
 }
 
-/* Seta para baixo e animação ao abrir o accordion */
+.panel label:last-child {
+    border-bottom: none;  
+}
+
+
+.panel input[type="checkbox"] {
+    margin-right: 10px; 
+}
+
+
 .accordion:after {
-    content: '\25BC'; 
+    content: '\25BC';
     font-size: 16px;
     float: right;
     transition: transform 0.3s;
 }
 
-.active:after {
-    content: "\25B2"; /* Seta para cima quando ativo */
-    transform: rotate(180deg); /* Anima a seta para cima */
+
+.accordion.active:after {
+    content: "\25B2";
+    transform: rotate(180deg);
 }
 
-/* Melhorias de espaçamento entre os filtros */
+
+.panel.open {
+    max-height: 500px;
+}
+
 .filtro {
-    margin-bottom: 20px; /* Espaçamento entre os filtros */
+    margin-bottom: 20px; 
+}
+
+.botao-filtro {
+    width: 100%;
+    height: 5vh;
+    background-color: #FCBF49;
+    border-radius: 10px;
+}
+
+.botao-filtro:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    background-color: #f0a500;
+}
+
+.botao-filtro i {
+    margin-left: 3px;
 }
 
 .products {
     display: flex;
-    flex-wrap: wrap; /* Permite que os produtos quebrem em linhas quando necessário */
-    justify-content: space-between; /* Espaça os produtos de maneira uniforme */
-    gap: 2rem; /* Espaço entre os produtos */
-    margin: 3vh auto; /* Margem superior e inferior */
-    width: 90%; /* Controla a largura do container */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 2rem; 
+    margin: 3vh auto; 
+    width: 90%; 
 }
 
 .products a {
-    text-align: center;  /* Centraliza o texto e os preços */
-    display: flex;       /* Flexbox para facilitar o layout vertical */
-    flex-direction: column; /* Alinha itens (imagem, nome, preço) em uma coluna */
-    justify-content: flex-start; /* Mantém os itens no topo, com espaçamento entre eles */
-    align-items: center;  /* Garante que tudo fique centralizado */
-    text-decoration: none; /* Remove sublinhado dos links */
+    text-align: center;  
+    display: flex;       
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;  
+    text-decoration: none;
     padding: 10px;
     box-sizing: border-box;
     color: #333;
@@ -243,19 +265,19 @@
 
 .foto-produto {
     width: 80%;  
-    height: 30vh;        /* Garante que a imagem ocupe 100% da largura do contêiner */
-    object-fit: cover;    /* Ajusta a imagem para cobrir completamente o contêiner, sem distorção */
-    border-radius: 10px;  /* Mantém as bordas arredondadas */
+    height: 30vh;        
+    object-fit: cover;    
+    border-radius: 10px;  
 }
 
 .products a:hover .foto-produto {
-    transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
+    transform: scale(1.05); 
 }
 
 .nome-produto {
     font-size: 1.1rem;
-    margin-top: 20px;    /* Espaçamento entre a imagem e o nome */
-    margin-bottom: 5px;  /* Espaçamento entre o nome e o preço */
+    margin-top: 20px;    
+    margin-bottom: 5px;      
     font-weight: 600;
     color: #333;
 }

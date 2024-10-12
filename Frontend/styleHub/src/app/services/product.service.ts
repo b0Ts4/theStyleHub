@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 
@@ -19,14 +19,35 @@ export class ProductService {
     return this.http.post<any>(this.apiUrl + "Produtos", productData);
   }
 
-  getProdutos(nome?: string): Observable<any> {
-    let url = this.apiUrl + "Produtos";
+getProdutos(nome?: string, genero?: string[], categoria?: string[], cor?: string[]): Observable<any> {
+  let params = new HttpParams();
 
-    if (nome) {
-      url += `?nome=${nome}`;
-    }
+  if (nome) {
+    params = params.append('nome', nome);
+  }
     
-    return this.http.get<any>(url);
+  if (cor && cor.length > 0) {
+    cor.forEach(cores => {
+      params = params.append('cor', cores);  
+    });
+  }
+
+  if (genero && genero.length > 0) {
+    genero.forEach(gen => {
+      params = params.append('genero', gen);  
+    });
+  }
+
+  if (categoria && categoria.length > 0) {
+    categoria.forEach(cat => {
+      params = params.append('categoria', cat);  
+    });
   } 
 
+  return this.http.get<any[]>(this.apiUrl + "Produtos", { params });
 }
+}
+
+
+  
+
