@@ -1,1 +1,85 @@
-<p>produto works!</p>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<header>
+    <div class="container-row">
+        <a href="/home">
+            <img class="logo" src="assets/images/Logo-style-hub-removebg-preview.png" alt="Logo">
+        </a>
+        <div class="categorias">
+            <div class="dropdown">
+                <a href="#">Masculino</a>
+                <div class="dropdown-content">
+                    <a href="#">Camisetas</a>
+                    <a href="#">Camisas</a>
+                    <a href="#">Casacos</a>
+                    <a href="#">Moletons</a>
+                    <a href="#">Calças</a>
+                    <a href="#">Bermudas</a>
+                    <a href="#">Acessórios</a>
+                    <a href="#">Tênis</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Feminino</a>
+                <div class="dropdown-content">
+                    <a href="#">Camisetas</a>
+                    <a href="#">Camisas</a>
+                    <a href="#">Casacos</a>
+                    <a href="#">Moletons</a>
+                    <a href="#">Calças</a>
+                    <a href="#">Bermudas</a>
+                    <a href="#">Acessórios</a>
+                    <a href="#">Tênis</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Infantil</a>
+                <div class="dropdown-content">
+                    <a href="#">Camisetas</a>
+                    <a href="#">Camisas</a>
+                    <a href="#">Casacos</a>
+                    <a href="#">Moletons</a>
+                    <a href="#">Calças</a>
+                    <a href="#">Bermudas</a>
+                    <a href="#">Acessórios</a>
+                    <a href="#">Tênis</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="searchbar">
+            <form (ngSubmit)="onSearch()">
+                <input type="text" [(ngModel)]="searchQuery" placeholder=" Pesquisar.." name="buscar">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        
+        <div class="perfil dropdown">
+            <a class="icon-profile" href="">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#">Meu Perfil</a>
+                <a class="carrinho" href="#">
+                    <p>Carrinho   </p>
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </a>
+                <a href="#">
+                    <p>Wishlist   </p>
+                    <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <p>{{ produto.nome }}</p>
+
+
+    </div>
+
+</body>

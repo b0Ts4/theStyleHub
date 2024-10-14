@@ -46,6 +46,10 @@ getProdutos(nome?: string, genero?: string[], categoria?: string[], cor?: string
 
   return this.http.get<any[]>(this.apiUrl + "Produtos", { params });
 }
+
+getUmProduto(id: number){
+  return this.http.get<any>(this.apiUrl + `Produtos/${id}`)
+}
 }
 
 

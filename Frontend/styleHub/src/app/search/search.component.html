@@ -114,7 +114,7 @@
         <div class="all-products">
             <div class="products" >
                 <p *ngIf="dados.length <= 0"> Ops! Não conseguimos encontrar nenhum produto...</p>
-                <a class="not-found" href="" *ngFor="let item of dados">
+                <a class="not-found" href="produto/ {{item.id}}" *ngFor="let item of dados">
                     <img class="foto-produto" src="{{ item.imagens.$values[0].caminho }}" alt="{{ item.nome }}">
                     <p class="nome-produto"> {{ item.nome }} </p>
                     <p class="preco-produto"> R$ {{ item.valor }} </p>
