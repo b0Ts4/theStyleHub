@@ -1,5 +1,9 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <header>
     <div class="container-row">
@@ -77,9 +81,28 @@
 </header>
 <body>
     <div class="container">
-        <p>{{ produto.nome }}</p>
+        <div class="pictures-container">
+            <img src="{{ img.caminho }}" alt="Imagem {{ produto.nome }}" *ngFor="let img of produto.imagens.$values">
+        </div>
+        
+        <div class="data-container">
+            <h2 class="data-name">{{ produto.nome }}</h2>
+            
+            <div class="data-price-container">
+                <p class="data-price-promotion"> R$ {{ produto.promocao }} </p>
+                <p class="data-price-original"> {{ produto.valor }}</p>
+            </div>
+
+            <button class="data-cart">
+               <p>Adicionar ao carrinho <i class="fa-solid fa-cart-plus"></i></p> 
+            </button>
+
+            <button class="data-wishlist">
+                <p>Adicionar a Wishlist <i class="fa-solid fa-heart"></i></p>
+            </button>
 
 
+        </div>
     </div>
 
 </body>
