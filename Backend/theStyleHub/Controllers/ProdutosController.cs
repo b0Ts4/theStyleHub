@@ -20,12 +20,13 @@ namespace theStyleHub.Controllers
             _context = context;
         }
 
-        // GET: api/Produtos/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<Produtos>> GetProdutos(int id)
         {
             var produtos = await _context.Produtos
-                .Include(p => p.Imagens)  // Inclui as imagens relacionadas ao produto
+                .Include(p => p.Avaliacoes)
+                .Include(p => p.Imagens)
                 .FirstOrDefaultAsync(p => p.Id == id);
 
             if (produtos == null)
@@ -33,7 +34,6 @@ namespace theStyleHub.Controllers
                 return NotFound();
             }
 
-            // Modifica o caminho da imagem para incluir o caminho completo do servidor
             foreach (var imagem in produtos.Imagens)
             {
                 imagem.Caminho = $"{Request.Scheme}://{Request.Host}/uploads/{imagem.Caminho}";

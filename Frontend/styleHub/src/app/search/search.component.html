@@ -117,7 +117,7 @@
                 <a class="not-found" href="produto/ {{item.id}}" *ngFor="let item of dados">
                     <img class="foto-produto" src="{{ item.imagens.$values[0].caminho }}" alt="{{ item.nome }}">
                     <p class="nome-produto"> {{ item.nome }} </p>
-                    <p class="preco-produto"> R$ {{ item.valor }} </p>
+                    <p class="preco-produto"> R$ {{ item.valor | number: '1.2-2' }} </p>
                 </a>
             </div>
         </div>

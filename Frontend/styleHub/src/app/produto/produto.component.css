@@ -193,8 +193,43 @@
     color: #999999;
 }
 
+.data-stars-container {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    display: flex;
+}
+
+.data-stars-container p {
+    font-size: 120%;
+    margin-left: 0.01vw;
+    padding-top: 0.2rem;
+}
+
+.fa-star {
+    color: #ccc;
+    font-size: 24px;
+    margin-right: 0.8vw;
+  }
+  
+.fa-star.filled {
+    color: #ffd700;
+}
+
+.data-descricao {
+    margin-top: 10vh;
+    margin-left: 1vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.data-descricao h3 {
+    margin-bottom: 1vh;
+    font-weight: 500;
+}
+
 .data-cart, .data-wishlist {
-    margin-top: 20vh;
+    margin-top: 8vh;
     height: 10vh;
     color: white;
     background-color: #FCBF49;

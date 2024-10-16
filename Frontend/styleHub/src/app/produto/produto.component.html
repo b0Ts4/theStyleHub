@@ -87,11 +87,25 @@
         
         <div class="data-container">
             <h2 class="data-name">{{ produto.nome }}</h2>
-            
-            <div class="data-price-container">
-                <p class="data-price-promotion"> R$ {{ produto.promocao }} </p>
-                <p class="data-price-original"> {{ produto.valor }}</p>
+             
+            <div class="data-stars-container">
+                <i
+                    class="fas fa-star"
+                    *ngFor="let estrela of [1, 2, 3, 4, 5]; let i = index"
+                    [class.filled]="i < mediaAvaliacao"
+                ></i>
+                <p>{{ mediaAvaliacao }}.0</p>
             </div>
+
+            <div class="data-price-container">
+                <p class="data-price-promotion"> R$ {{ produto.promocao | number: '1.2-2' }} </p>
+                <p class="data-price-original"> {{ produto.valor | number: '1.2-2' }}</p>
+            </div>
+            
+           <div class="data-descricao">
+            <h3>Descrição:</h3>   
+            <p> {{ produto.descricao }} </p>
+           </div>
 
             <button class="data-cart">
                <p>Adicionar ao carrinho <i class="fa-solid fa-cart-plus"></i></p> 
