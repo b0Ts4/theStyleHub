@@ -15,6 +15,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ProdutoComponent } from './produto/produto.component';
     HomeComponent,
     SearchComponent,
     ProdutoComponent,
+    LoginComponent,
+    CadastroUsuarioComponent,
   ],
   imports: [
     BrowserModule,

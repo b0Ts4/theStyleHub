@@ -131,13 +131,13 @@
         var acc = document.getElementsByClassName("accordion");
         for (var i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
-                // Alternar classe "active" no botão
+                
                 this.classList.toggle("active");
                 
-                // Obter o painel associado
+                
                 var panel = this.nextElementSibling;
                 
-                // Verificar se o painel está visível e alternar
+                
                 if (panel.style.maxHeight) {
                     panel.style.maxHeight = null;
                 } else {

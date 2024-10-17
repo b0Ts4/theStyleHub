@@ -50,6 +50,14 @@ getProdutos(nome?: string, genero?: string[], categoria?: string[], cor?: string
 getUmProduto(id: number){
   return this.http.get<any>(this.apiUrl + `Produtos/${id}`)
 }
+
+addUser(userData: any) {
+  const headers = new HttpHeaders({
+    'Content-Type': 'application/json'
+  });
+
+ return this.http.post<any>(this.apiUrl + "Usuarios", userData) 
+}
 }
 
 
