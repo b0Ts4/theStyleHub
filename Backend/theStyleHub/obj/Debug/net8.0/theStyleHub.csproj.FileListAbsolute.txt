@@ -463,3 +463,4 @@ C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\obj\Debug\net8.
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\obj\Debug\net8.0\theStyleHub.pdb
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\obj\Debug\net8.0\theStyleHub.genruntimeconfig.cache
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\obj\Debug\net8.0\ref\theStyleHub.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\BCrypt.Net-Next.dll

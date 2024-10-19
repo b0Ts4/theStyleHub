@@ -1,1 +1,146 @@
-<p>cadastro-usuario works!</p>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<header>
+    <div class="container-row">
+        <img class="logo" src="assets/images/Logo-style-hub-removebg-preview.png" alt="Logo">
+        <div class="categorias">
+            <div class="dropdown">
+                <a href="#">Masculino</a>
+                <div class="dropdown-content">
+                    <a href="#">Camisetas</a>
+                    <a href="#">Camisas</a>
+                    <a href="#">Casacos</a>
+                    <a href="#">Moletons</a>
+                    <a href="#">Calças</a>
+                    <a href="#">Bermudas</a>
+                    <a href="#">Acessórios</a>
+                    <a href="#">Tênis</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Feminino</a>
+                <div class="dropdown-content">
+                    <a href="#">Camisetas</a>
+                    <a href="#">Camisas</a>
+                    <a href="#">Casacos</a>
+                    <a href="#">Moletons</a>
+                    <a href="#">Calças</a>
+                    <a href="#">Bermudas</a>
+                    <a href="#">Acessórios</a>
+                    <a href="#">Tênis</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Infantil</a>
+                <div class="dropdown-content">
+                    <a href="#">Camisetas</a>
+                    <a href="#">Camisas</a>
+                    <a href="#">Casacos</a>
+                    <a href="#">Moletons</a>
+                    <a href="#">Calças</a>
+                    <a href="#">Bermudas</a>
+                    <a href="#">Acessórios</a>
+                    <a href="#">Tênis</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="searchbar">
+            <form (ngSubmit)="onSearch()">
+                <input type="text" [(ngModel)]="searchQuery" placeholder=" Pesquisar.." name="buscar">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        
+        <div class="perfil dropdown">
+            <a class="icon-profile" href="">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#">Meu Perfil</a>
+                <a class="carrinho" href="#">
+                    <p>Carrinho   </p>
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                </a>
+                <a href="#">
+                    <p>Wishlist   </p>
+                    <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="cad">
+        <div class="container">
+
+            <div class="first-column">
+                <div class="input-data">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" formControlName="nome" [ngClass]="{'input-error': isFieldInvalid('nome')}">
+                </div>
+        
+                <div class="input-data">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" formControlName="email" [ngClass]="{'input-error': isFieldInvalid('email')}">
+                </div>
+        
+                <div class="input-data">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" formControlName="senha" [ngClass]="{'input-error': isFieldInvalid('senha') || formulario.hasError('senhasNaoCorrespondem') && formulario.get('confirmaSenha')?.touched}">
+                </div>
+                
+                <div class="input-data">
+                    <label for="confirmaSenha">Confirmar senha:</label>
+                    <input type="password" id="confirmaSenha" formControlName="confirmaSenha" [ngClass]="{'input-error': verificarErroSenhas()}">
+                </div>
+
+                <div class="input-data">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" formControlName="cpf" [ngClass]="{'input-error': isFieldInvalid('cpf')}">
+                </div>
+            </div>
+            <div class="second-column">
+
+                <div class="input-data">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" formControlName="cep" (blur)="onCepChange()" [ngClass]="{'input-error': isFieldInvalid('cep')}">
+                </div>
+                <div class="cidadeEstado">
+                    <div class="input-data">
+                        <label for="estado">Estado:</label>
+                        <input class="stateInput" type="text" id="estado" formControlName="estado" [ngClass]="{'input-error': isFieldInvalid('estado')}">
+                    </div>
+    
+                    <div class="input-data">
+                        <label for="cidade">Cidade:</label>
+                        <input class="cityInput" type="text" id="cidade" formControlName="cidade" [ngClass]="{'input-error': isFieldInvalid('cidade')}">
+                    </div>
+                </div>
+
+                <div class="input-data">
+                    <label for="logradouro">Logradouro:</label>
+                    <input type="text" id="logradouro" formControlName="logradouro" [ngClass]="{'input-error': isFieldInvalid('logradouro')}">
+                </div>
+
+                <div class="input-data">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" formControlName="bairro" [ngClass]="{'input-error': isFieldInvalid('bairro')}">
+                </div>
+
+                <div class="input-data">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" formControlName="complemento">
+                </div>
+            </div>
+
+        </div>
+
+        <button type="submit" class="actionButton">
+            Cadastrar-se
+        </button>
+    </form>
+</body>

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\migrations\\20241017152905_senhausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:migrations\\20241017152905_senhausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\models\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\controllers\\avaliacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|c:\\users\\wagner\\documents\\github\\thestylehub\\backend\\thestylehub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C2D3F830-2C75-44F0-9E10-3D2AF8D45CE0}|theStyleHub.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -70,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,20 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241017152905_SenhaUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Migrations\\20241017152905_SenhaUsuario.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241017152905_SenhaUsuario.cs",
-              "ToolTip": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Migrations\\20241017152905_SenhaUsuario.cs",
-              "RelativeToolTip": "Migrations\\20241017152905_SenhaUsuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T15:29:06.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProdutoDTO.cs",
               "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Models\\ProdutoDTO.cs",
               "RelativeDocumentMoniker": "Models\\ProdutoDTO.cs",
@@ -103,8 +86,7 @@
               "RelativeToolTip": "Models\\ProdutoDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T21:39:26.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T21:39:26.514Z"
             },
             {
               "$type": "Document",
@@ -120,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "ImagensController.cs",
               "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Controllers\\ImagensController.cs",
               "RelativeDocumentMoniker": "Controllers\\ImagensController.cs",
@@ -132,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PedidosController.cs",
               "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Controllers\\PedidosController.cs",
               "RelativeDocumentMoniker": "Controllers\\PedidosController.cs",
@@ -140,12 +122,11 @@
               "RelativeToolTip": "Controllers\\PedidosController.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAgwCsAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T23:02:48.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T23:02:48.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ProdutosController.cs",
               "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Controllers\\ProdutosController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProdutosController.cs",
@@ -158,19 +139,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
               "ToolTip": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "Controllers\\UsuariosController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwBcAAAARAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAIwFEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T22:16:38.152Z"
+              "WhenOpened": "2024-10-07T22:16:38.152Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -182,13 +164,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Usuarios.cs",
               "DocumentMoniker": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Models\\Usuarios.cs",
               "RelativeDocumentMoniker": "Models\\Usuarios.cs",
               "ToolTip": "C:\\Users\\Wagner\\Documents\\GitHub\\theStyleHub\\Backend\\theStyleHub\\Models\\Usuarios.cs",
               "RelativeToolTip": "Models\\Usuarios.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAmwA8AAAAqAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-06T01:55:52.779Z",
               "EditorCaption": ""

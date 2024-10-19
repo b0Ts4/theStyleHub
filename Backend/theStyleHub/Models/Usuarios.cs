@@ -18,6 +18,10 @@ public class Usuarios
     [Column(TypeName = "varchar(300)")]
     public string Endereco { get; set; } = "";
 
+    [Required]
+    [Column(TypeName = "varchar(100)")]
+    public string Email { get; set; } = "";
+
     [Column(TypeName = "varchar(300)")]
     public string Hash_senha { get; set; } = "";
 

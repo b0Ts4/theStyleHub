@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using theStyleHub.Models;
+using BCrypt.Net;
 
 namespace theStyleHub.Controllers
 {
@@ -77,6 +78,8 @@ namespace theStyleHub.Controllers
         [HttpPost]
         public async Task<ActionResult<Usuarios>> PostUsuarios(Usuarios usuarios)
         {
+            usuarios.Hash_senha = BCrypt.Net.BCrypt.HashPassword(usuarios.Hash_senha);
+
             _context.Usuarios.Add(usuarios);
             await _context.SaveChangesAsync();
 
