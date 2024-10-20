@@ -464,3 +464,11 @@ C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\obj\Debug\net8.
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\obj\Debug\net8.0\theStyleHub.genruntimeconfig.cache
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\obj\Debug\net8.0\ref\theStyleHub.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

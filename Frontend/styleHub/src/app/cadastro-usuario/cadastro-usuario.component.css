@@ -1,6 +1,6 @@
 /*/////////////////////NAVBAR/////////////////////////*/
 * {
-    margin: -10px; /* Mantido conforme sua preferência */
+    margin: -10px;
     padding: 0;
     border: 0;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
 
 .categorias {
     display: flex;
-    gap: 20vh; /* Mantido o gap que você escolheu */
+    gap: 20vh;
     align-items: center;
 }
 
@@ -51,18 +51,18 @@
     display: block;
     font-size: 1rem;
     display: flex;
-    align-items: center; /* Centraliza ícones e textos verticalmente */
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    align-items: center;
+    gap: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-content a i {
-    font-size: 1.2rem; /* Define um tamanho consistente para os ícones */
+    font-size: 1.2rem;
 }
 
 .dropdown-content a:hover {
     background-color: #f0a500;
-    transform: scale(1.05); /* Efeito de leve aumento ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .dropdown:hover .dropdown-content {
@@ -96,8 +96,8 @@
     border-radius: 10px 0 0 10px;
     height: 5vh;
     width: 18vw;
-    padding-left: 30px; /* Adicionando padding para o texto não ficar encostado */
-    outline: none; /* Remove o contorno azul ao focar */
+    padding-left: 30px;
+    outline: none;
 }
 
 .searchbar i{
@@ -115,7 +115,7 @@
     margin-top: 6px;
 }
 
-/* Ajuste para o dropdown do perfil */
+
 .perfil .dropdown-content {
     right: 0;
     left: auto;
@@ -124,7 +124,7 @@
 
 .perfil .dropdown-content a p {
     margin: 0;
-    font-size: 1rem; /* Ajuste o tamanho da fonte para ficar consistente */
+    font-size: 1rem;
     color: white;
 }
 
@@ -132,7 +132,7 @@
     color: white;
 }
 
-/* Estilo adicional para o dropdown */
+
 .carrinho, .wishlist {
     display: flex;
     align-items: center;
@@ -142,15 +142,15 @@
 }
 
 .carrinho i, .wishlist i {
-    font-size: 1.4rem; /* Tamanho dos ícones */
+    font-size: 1.4rem;
 }
 
 .carrinho:hover, .wishlist:hover {
-    transform: scale(1.05); /* Efeito hover */
+    transform: scale(1.05);
 }
 
 .perfil .dropdown-content a:hover i {
-    color: #fff; /* Mantém a cor dos ícones no hover */
+    color: #fff;
 }
 
 /*/////////////////////NAVBAR/////////////////////////*/

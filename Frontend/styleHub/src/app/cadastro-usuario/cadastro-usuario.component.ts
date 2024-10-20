@@ -3,7 +3,7 @@ import { ProductService } from '../services/product.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { CepApiService } from '../services/cep-api.service';
-import { FormGroup, FormBuilder, AbstractControl, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, AbstractControl, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-usuario',
