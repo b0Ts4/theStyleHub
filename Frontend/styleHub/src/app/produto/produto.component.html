@@ -65,7 +65,7 @@
             <a class="icon-profile" href="">
                 <i class="fa-solid fa-user"></i>
             </a>
-            <div class="dropdown-content">
+            <div class="dropdown-content" *ngIf="verifyToken(); else loginTemplate">
                 <a href="#">Meu Perfil</a>
                 <a class="carrinho" href="#">
                     <p>Carrinho   </p>
@@ -75,7 +75,20 @@
                     <p>Wishlist   </p>
                     <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
                 </a>
-            </div>
+            </div>  
+            
+            <ng-template #loginTemplate>
+                <div class="dropdown-content">
+                    <a href="/login">
+                        <p>Login</p>
+                        <i class="fa-solid fa-right-to-bracket" style="color: #ffffff; margin-left: 2px;"></i>
+                    </a>
+                    <a href="/cadastro">
+                        <p>Cadastro</p>
+                        <i class="fa-solid fa-id-card" style="color: #ffffff; margin-left: 2px;"></i>
+                    </a>
+                </div>
+            </ng-template>
         </div>
     </div>
 </header>

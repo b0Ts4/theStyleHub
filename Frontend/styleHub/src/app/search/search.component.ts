@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-search',
@@ -8,7 +9,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./search.component.css'] 
 })
 export class SearchComponent {
-  constructor(private ProductService: ProductService, private route: ActivatedRoute, private router: Router){}
+  constructor(
+    private ProductService: ProductService, 
+    private route: ActivatedRoute, 
+    private router: Router,
+    private authService: AuthService
+  ){}
   searchQuery: string = '';
   dados: any = [];
   activePanel: string = '';  
@@ -84,6 +90,16 @@ export class SearchComponent {
       queryParams: queryParams,
       queryParamsHandling: ''
     });
+  }
+
+  verifyToken(): boolean{
+    if(!this.authService.getToken()){
+      console.log("token nao ta aqui");
+      return false;
+    }
+    console.log("token ta aqui");
+    //this.authService.logout();
+    return true;
   }
 
   ngOnInit(): void{

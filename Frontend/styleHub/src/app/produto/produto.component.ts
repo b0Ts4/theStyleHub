@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-produto',
@@ -14,7 +15,12 @@ export class ProdutoComponent {
   searchQuery: string = '';
   mediaAvaliacao: number = 0;
 
-  constructor(private ProductService: ProductService, private route: ActivatedRoute, private router: Router){
+  constructor(
+    private ProductService: ProductService, 
+    private route: ActivatedRoute, 
+    private router: Router,
+    private authService: AuthService
+  ){
     
   }
 
@@ -46,6 +52,16 @@ export class ProdutoComponent {
     }
 
     console.log("Media das avaliacoes: ", this.mediaAvaliacao);
+  }
+
+  verifyToken(): boolean{
+    if(!this.authService.getToken()){
+      console.log("token nao ta aqui");
+      return false;
+    }
+    console.log("token ta aqui");
+    //this.authService.logout();
+    return true;
   }
 
   onSearch() {

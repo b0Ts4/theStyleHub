@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class AuthService {
   private apiUrl = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
@@ -16,5 +16,17 @@ export class UserService {
     });
 
     return this.http.post<any>(this.apiUrl + "Login", userData);
+  }
+
+  saveToken(token: string): void {
+    localStorage.setItem('jwtToken', token);
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('jwtToken');
+  }
+
+  logout(): void {
+    localStorage.removeItem('jwtToken');
   }
 }

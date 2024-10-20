@@ -62,7 +62,7 @@
 
 .dropdown-content a:hover {
     background-color: #f0a500;
-    transform: scale(1.05); /* Efeito de leve aumento ao passar o mouse */
+    transform: scale(1.02); /* Efeito de leve aumento ao passar o mouse */
 }
 
 .dropdown:hover .dropdown-content {

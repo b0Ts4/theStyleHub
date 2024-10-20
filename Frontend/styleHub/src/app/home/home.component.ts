@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment.development';
+import { AuthService } from '../services/auth.service';
 declare var $: any;
 
 @Component({
@@ -10,7 +11,7 @@ declare var $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private ProductService: ProductService, private router: Router){}
+  constructor(private ProductService: ProductService, private router: Router, private authService: AuthService){}
   
   dados: any = [];
   searchQuery: string = '';
@@ -31,6 +32,16 @@ export class HomeComponent {
         console.error('Erro ao receber dados', error);
       }
     )
+  }
+
+  verifyToken(): boolean{
+    if(!this.authService.getToken()){
+      console.log("token nao ta aqui");
+      return false;
+    }
+    console.log("token ta aqui");
+    //this.authService.logout();
+    return true;
   }
   
   initSlickCarousel() {

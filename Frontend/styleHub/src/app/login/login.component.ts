@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { AuthService } from '../services/auth.service';
 import { FormGroup, FormBuilder, AbstractControl, ValidationErrors, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
@@ -15,7 +15,7 @@ export class LoginComponent {
   formulario: FormGroup;
   searchQuery: string ='';
 
-  constructor(private router: Router, private userService: UserService, private fb: FormBuilder, private toastr: ToastrService){
+  constructor(private router: Router, private authService: AuthService, private fb: FormBuilder, private toastr: ToastrService){
     this.formulario = this.fb.group({
       email: [''],
       senha: ['']
@@ -29,18 +29,21 @@ export class LoginComponent {
       senha: this.formulario.get('senha')?.value
     }
 
-    this.userService.login(loginData).subscribe(response => {
-      console.log("Usuario logado com sucesso");
+    this.authService.login(loginData).subscribe(response => {
+      console.log("Usuario logado com sucesso", response);
+
+      if (response.token) {
+        this.authService.saveToken(response.token);  
+        this.router.navigate(['/pagina-protegida']); 
+      } else {
+        console.error('Token JWT não encontrado na resposta');
+      }
+
       this.router.navigate(['/home']);
     }, err => {
       console.log("Erro ao fazer login", err);
       this.toastr.error("Email ou senha incorretos", "Erro ao fazer login");
     })
   }
-
-  onSearch() {
-    this.router.navigate(["search"], {queryParams: { nome: this.searchQuery} })
-  }
-
   
 }

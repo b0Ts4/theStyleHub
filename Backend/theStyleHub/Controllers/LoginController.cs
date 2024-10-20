@@ -37,7 +37,7 @@ public class LoginController : Controller
 
         var token = _tokenService.gerarTokenJWT(usuario);
 
-        return Ok(new {message = "Login realizado com sucesso"});
+        return Ok(new {message = "Login realizado com sucesso", token});
     }
 }
 public class LoginRequest
