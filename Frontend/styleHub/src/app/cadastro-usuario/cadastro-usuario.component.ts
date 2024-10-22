@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { CepApiService } from '../services/cep-api.service';
 import { FormGroup, FormBuilder, AbstractControl, ValidationErrors, Validators } from '@angular/forms';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -18,7 +19,7 @@ export class CadastroUsuarioComponent {
   validator: number = 0;
 
   constructor(
-    private ProductService: ProductService,
+    private userService: UserService,
     private toastr: ToastrService, 
     private router: Router, 
     private fb: FormBuilder ,
@@ -108,7 +109,7 @@ export class CadastroUsuarioComponent {
       this.toastr.error('Preencha todos os campos obrigatórios corretamente!', 'Erro no cadastro');
     }
       
-    this.ProductService.addUser(userData).subscribe(response => {
+    this.userService.addUser(userData).subscribe(response => {
       console.log("Usuário cadastrado com sucesso!", response);
       this.toastr.success("Cadastro realizado com sucesso", "Cadastro");
       this.router.navigate(['/home']);

@@ -29,17 +29,21 @@ namespace theStyleHub.Controllers
         }
 
         // GET: api/Usuarios/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Usuarios>> GetUsuarios(int id)
+        [HttpGet("{email}")]
+        public async Task<ActionResult<Usuarios>> GetUsuarios(string email)
         {
-            var usuarios = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuarios
+                .Include(p => p.Pedidos)
+                .Include(p => p.Carrinho)
+                .Include(p => p.Wishlist)
+                .FirstOrDefaultAsync(p => p.Email.Equals(email));
 
-            if (usuarios == null)
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            return usuarios;
+            return usuario;
         }
 
         // PUT: api/Usuarios/5
