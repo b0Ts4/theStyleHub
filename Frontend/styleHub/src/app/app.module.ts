@@ -17,6 +17,8 @@ import { SearchComponent } from './search/search.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
     ProdutoComponent,
     LoginComponent,
     CadastroUsuarioComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

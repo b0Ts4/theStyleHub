@@ -6,6 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: 'cadastro-produtos', component: CadastroProdutosComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'produto/:id', component: ProdutoComponent},
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'cadastro', component: CadastroUsuarioComponent}
+  {path: 'cadastro', component: CadastroUsuarioComponent},
+  {path: 'perfil', component: ProfileComponent}
 ];
 
 @NgModule({
