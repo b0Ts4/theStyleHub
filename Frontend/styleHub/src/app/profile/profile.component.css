@@ -154,3 +154,18 @@
 }
 
 /*/////////////////////NAVBAR/////////////////////////*/
+.container {
+    margin-top:7vh;
+    margin-left: 5vw;    
+}
+
+.mensagem {
+    font-size: 6vh;
+}
+
+.pedidos-container {
+    font-size: 4vh;
+    display: flex;
+    flex-direction: row;
+    margin-top:8vh;
+}

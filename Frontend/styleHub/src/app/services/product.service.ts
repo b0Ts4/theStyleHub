@@ -51,6 +51,21 @@ getUmProduto(id: number){
   return this.http.get<any>(this.apiUrl + `Produtos/${id}`)
 }
 
+addCart(idProduto: number, idUser: number) {
+  return this.http.post<any>(`${this.apiUrl}Produtos/addCarrinho`, {
+    idProduto: idProduto,
+    idUser: idUser
+});
+}
+
+addWishlist(idProduto: number, idUser: number) {
+  let params = new HttpParams();
+
+  params = params.append('idProduto', idProduto);
+  params = params.append('idUser', idUser);
+
+  return this.http.put<any>(this.apiUrl + "Produtos/addWishlist", {params});
+}
 
 }
 
