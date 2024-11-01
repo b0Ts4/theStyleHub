@@ -12,20 +12,29 @@ public class ApplicationDbContext : DbContext
     public DbSet<Avaliacoes> Avaliacoes { get; set; }
     public DbSet<Imagens> Imagens { get; set; }
     public DbSet<Pedidos> Pedidos { get; set; }
+    public DbSet<ItensCarrinho> ItensCarrinho { get; set; }
+    public DbSet<ItensWishlist> ItensWishlist { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<ItensCarrinho>()
+            .HasOne(ci => ci.Usuario)
+            .WithMany(u => u.ItensCarrinho)
+            .HasForeignKey(ci => ci.UsuarioId);
 
-        // Configuração do relacionamento muitos-para-muitos
-        modelBuilder.Entity<Usuarios>()
-            .HasMany(u => u.Carrinho)
-            .WithMany(p => p.UsuariosCarrinho)  // Certifique-se de que a classe Produtos tem essa lista
-            .UsingEntity(j => j.ToTable("UsuarioCarrinho"));  // Nome da tabela intermediária
+        modelBuilder.Entity<ItensCarrinho>()
+            .HasOne(ci => ci.Produto)
+            .WithMany(p => p.ItensCarrinho)
+            .HasForeignKey(ci => ci.ProdutoId);
 
-        modelBuilder.Entity<Usuarios>()
-            .HasMany(u => u.Wishlist)
-            .WithMany(p => p.UsuariosWishlist)  // Certifique-se de que a classe Produtos tem essa lista
-            .UsingEntity(j => j.ToTable("UsuarioWishlist"));  // Nome da tabela intermediária
+        modelBuilder.Entity<ItensWishlist>()
+            .HasOne(wi => wi.Usuario)
+            .WithMany(u => u.ItensWishlist)
+            .HasForeignKey(wi => wi.UsuarioId);
+
+        modelBuilder.Entity<ItensWishlist>()
+            .HasOne(wi => wi.Produto)
+            .WithMany(p => p.ItensWishlist)
+            .HasForeignKey(wi => wi.ProdutoId);
     }
 }

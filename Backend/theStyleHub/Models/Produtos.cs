@@ -35,10 +35,9 @@ public class Produtos
     [Column(TypeName = "float")]
     public float Promocao {  get; set; }
 
-    public List<Usuarios> UsuariosCarrinho { get; set; }  
-    public List<Usuarios> UsuariosWishlist { get; set; }
-
     public List<Avaliacoes> Avaliacoes { get; set; }
     public List<Imagens> Imagens { get; set; }
+    public List<ItensCarrinho> ItensCarrinho { get; set; }
+    public List<ItensWishlist> ItensWishlist { get; set; }
 
 }

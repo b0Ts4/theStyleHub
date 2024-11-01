@@ -26,8 +26,8 @@ public class Usuarios
     public string Hash_senha { get; set; } = "";
 
 
-    public List<Produtos> Carrinho { get; set; } = new List<Produtos>();
-    public List<Produtos> Wishlist { get; set; } = new List<Produtos>();
+    public List<ItensCarrinho> ItensCarrinho { get; set; }
+    public List<ItensWishlist> ItensWishlist { get; set; }
     public List<Avaliacoes> Avaliacoes { get; set; } = new List<Avaliacoes>();
     public List<Pedidos> Pedidos { get; set; } = new List<Pedidos>();
 
