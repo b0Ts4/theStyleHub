@@ -15,12 +15,11 @@ namespace theStyleHub.Controllers;
 public class ProdutosController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
-    private readonly ProdutosService _produtosService;
+    
 
-    public ProdutosController(ApplicationDbContext context, ProdutosService produtosService)
+    public ProdutosController(ApplicationDbContext context)
     {
         _context = context;
-        _produtosService = produtosService;
     }
 
     
@@ -206,74 +205,4 @@ public class ProdutosController : ControllerBase
     {
         return _context.Produtos.Any(e => e.Id == id);
     }
-
-    [HttpPost("addCarrinho")]
-    public async Task<IActionResult> AddCarrinho([FromBody] AddCarrinhoRequest request)
-    {
-        var user = await _context.Usuarios.FirstOrDefaultAsync(p => p.Clerk_id == request.IdUser);
-        var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == request.IdProduto);
-
-        if (user == null)
-        {
-            return NotFound("Usuário não encontrado.");
-        }
-
-        if (produto == null)
-        {
-            return NotFound("Produto não encontrado.");
-        }
-
-        _produtosService.addCarrinho(produto, user);
-
-        return Ok("Produto adicionado com sucesso.");
-    }
-
-    [HttpPost("addWishlist")]
-    public async Task<IActionResult> AddWishlist([FromBody] AddCarrinhoRequest request)
-    {
-        var user = await _context.Usuarios.FirstOrDefaultAsync(p => p.Clerk_id == request.IdUser);
-        var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == request.IdProduto);
-
-        if (user == null)
-        {
-            return NotFound("Usuário não encontrado.");
-        }
-
-        if (produto == null)
-        {
-            return NotFound("Produto não encontrado.");
-        }
-
-        _produtosService.addWishlist(produto, user);
-
-        return Ok("Produto adicionado com sucesso.");
-    }
-
-    [HttpPut("removeCarrinho")]
-    public async Task<IActionResult> RemoveCarrinho(int idProduto, int idUser)
-    {
-        var user = await _context.Usuarios.FirstOrDefaultAsync(p => p.Clerk_id == idUser);
-        var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == idProduto);
-
-        _produtosService.removeCarrinho(produto, user);
-
-        return Ok();
-    }
-
-    [HttpPut("removeWishlist")]
-    public async Task<IActionResult> RemoveWishlist(int idProduto, int idUser)
-    {
-        var user = await _context.Usuarios.FirstOrDefaultAsync(p => p.Clerk_id == idUser);
-        var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == idProduto);
-
-        _produtosService.removeWishlist(produto, user);
-
-        return Ok();
-    }
-}
-
-public class AddCarrinhoRequest
-{
-    public int IdProduto { get; set; }
-    public int IdUser { get; set; }
 }

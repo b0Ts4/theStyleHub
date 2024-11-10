@@ -9,10 +9,10 @@ public class ItensCarrinho
     public int Id { get; set; }
 
     [ForeignKey("UsuarioId")]
-    public Usuarios Usuario { get; set; }
+    public Usuarios? Usuario { get; set; }
     public int UsuarioId { get; set; }
 
     [ForeignKey("ProdutoId")]
-    public Produtos Produto { get; set; }
+    public Produtos? Produto { get; set; }
     public int ProdutoId { get; set; }
 }

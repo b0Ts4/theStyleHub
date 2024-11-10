@@ -296,7 +296,6 @@ C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -472,3 +471,10 @@ C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Wagner\Documents\GitHub\theStyleHub\Backend\theStyleHub\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
