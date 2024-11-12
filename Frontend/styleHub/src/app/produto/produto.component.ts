@@ -18,6 +18,7 @@ export class ProdutoComponent {
   tokenData: any;
   userData: any;
   userId: any;
+  email: any;
 
   constructor(
     private ProductService: ProductService,
@@ -29,12 +30,42 @@ export class ProdutoComponent {
   ) {}
 
   addCart() {
+    this.ProductService.addCart(
+      this.produto.id,
+      this.userData.clerk_id
+    ).subscribe({
+      next: (res) => {
+        console.log('Produto adicionado ao carrinho com sucesso.', res);
+        this.toastr.success('', 'Produto adicionado ao carrinho com sucesso!');
+      },
+      error: (err) => {
+        console.error('Erro ao adicionar produto ao carrinho', err);
+      },
+    });
+  }
+
+  addWishlist() {
+    this.ProductService.addWishlist(
+      this.produto.id,
+      this.userData.clerk_id
+    ).subscribe({
+      next: (res) => {
+        console.log('Produto adicionado a wishlist com sucesso.', res);
+        this.toastr.success('', 'Produto adicionado a wishlist com sucesso!');
+      },
+      error: (err) => {
+        console.error('Erro ao adicionar produto a wishlist', err);
+      },
+    });
+  }
+
+  ngOnInit(): void {
     this.tokenData = this.authService.getUserDataFromToken();
     console.log('Dados no token:', this.tokenData);
 
-    const email = this.tokenData.email;
+    this.email = this.tokenData.email;
 
-    this.userService.getUsuario(email).subscribe(
+    this.userService.getUsuario(this.email).subscribe(
       (response) => {
         console.log('Dados usuario:', response);
         this.userData = response;
@@ -43,30 +74,12 @@ export class ProdutoComponent {
           this.produto.id,
           this.userData.clerk_id
         );
-
-        this.ProductService.addCart(
-          this.produto.id,
-          this.userData.clerk_id
-        ).subscribe({
-          next: (res) => {
-            console.log('Produto adicionado ao carrinho com sucesso.', res);
-            this.toastr.success(
-              '',
-              'Produto adicionado ao carrinho com sucesso!'
-            );
-          },
-          error: (err) => {
-            console.error('Erro ao adicionar produto ao carrinho', err);
-          },
-        });
       },
       (err) => {
-        console.error('Erro ao carregar dados do cliente', err);
+        console.log('Erro ao carregar dados do usuário', err);
       }
     );
-  }
 
-  ngOnInit(): void {
     this.produtoId = Number(this.route.snapshot.paramMap.get('id'));
 
     this.ProductService.getUmProduto(this.produtoId).subscribe({

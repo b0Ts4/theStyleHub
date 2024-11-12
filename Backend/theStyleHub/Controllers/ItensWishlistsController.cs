@@ -75,8 +75,20 @@ namespace theStyleHub.Controllers
         // POST: api/ItensWishlists
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<ItensWishlist>> PostItensWishlist(ItensWishlist itensWishlist)
+        public async Task<ActionResult<ItensWishlist>> PostItensWishlist(int userId, int productId)
         {
+            var user = await _context.Usuarios.FirstOrDefaultAsync(p => p.Clerk_id == userId);
+            var product = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == userId);
+            if (product == null)
+            {
+                return BadRequest("O produto especificado não existe.");
+            }
+
+            var itensWishlist = new ItensWishlist();
+            itensWishlist.ProdutoId = productId;
+            itensWishlist.UsuarioId = userId;
+            itensWishlist.Produto = product;
+            itensWishlist.Usuario = user;
             _context.ItensWishlist.Add(itensWishlist);
             await _context.SaveChangesAsync();
 

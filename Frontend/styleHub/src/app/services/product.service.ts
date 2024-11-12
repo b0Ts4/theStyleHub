@@ -69,11 +69,14 @@ export class ProductService {
   }
 
   addWishlist(idProduto: number, idUser: number) {
-    let params = new HttpParams();
+    const params = new HttpParams()
+      .set('userId', idUser)
+      .set('productId', idProduto);
 
-    params = params.append('idProduto', idProduto);
-    params = params.append('idUser', idUser);
+    console.log('Parametros recebidos pela url', params.toString());
 
-    return this.http.put<any>(this.apiUrl + 'Produtos/addWishlist', { params });
+    return this.http.post<any>(`${this.apiUrl}ItensWishlists`, null, {
+      params,
+    });
   }
 }
