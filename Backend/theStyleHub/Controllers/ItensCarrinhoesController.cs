@@ -77,9 +77,18 @@ namespace theStyleHub.Controllers
         [HttpPost]
         public async Task<ActionResult<ItensCarrinho>> PostItensCarrinho(int userId, int productId)
         {
+            var user = await _context.Usuarios.FirstOrDefaultAsync(p => p.Clerk_id == userId);
+            var product = await _context.Produtos.FirstOrDefaultAsync(p => p.Id == userId);
+            if (product == null)
+            {
+                return BadRequest("O produto especificado não existe.");
+            }
+
             var itensCarrinho = new ItensCarrinho();
             itensCarrinho.ProdutoId = productId;
             itensCarrinho.UsuarioId = userId;
+            itensCarrinho.Produto = product;
+            itensCarrinho.Usuario = user;
             _context.ItensCarrinho.Add(itensCarrinho);
             await _context.SaveChangesAsync();
 
