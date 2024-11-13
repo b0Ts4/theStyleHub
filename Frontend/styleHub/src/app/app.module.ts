@@ -18,6 +18,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     CadastroUsuarioComponent,
     ProfileComponent,
+    CarrinhoComponent,
   ],
   imports: [
     BrowserModule,

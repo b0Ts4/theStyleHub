@@ -25,7 +25,7 @@ namespace theStyleHub.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuarios>>> GetUsuarios()
         {
-            return await _context.Usuarios.Include(p => p.ItensCarrinho).ToListAsync();
+            return await _context.Usuarios.ToListAsync();
         }
 
         // GET: api/Usuarios/5
@@ -34,6 +34,8 @@ namespace theStyleHub.Controllers
         {
             var usuario = await _context.Usuarios
                 .Include(p => p.Pedidos)
+                .Include(p => p.ItensCarrinho)
+                .Include(p => p.ItensWishlist)
                 .FirstOrDefaultAsync(p => p.Email.Equals(email));
 
             if (usuario == null)
